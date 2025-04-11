@@ -1,0 +1,21 @@
+Function Name,Description,Example Usage,Return Type
+isDigit,Determines if the specified character is a digit.,Character.isDigit('5');,boolean
+isLetter,Determines if the specified character is a letter.,Character.isLetter('A');,boolean
+isLetterOrDigit,Determines if the specified character is a letter or a digit.,Character.isLetterOrDigit('A');,boolean
+isLowerCase,Determines if the specified character is in lowercase.,Character.isLowerCase('a');,boolean
+isUpperCase,Determines if the specified character is in uppercase.,Character.isUpperCase('A');,boolean
+isWhitespace,Determines if the specified character is a whitespace character.,Character.isWhitespace(' ');,boolean
+toLowerCase,Converts the specified character to lowercase.,Character.toLowerCase('A');,char
+toUpperCase,Converts the specified character to uppercase.,Character.toUpperCase('a');,char
+isDefined,Determines if the specified character has a defined Unicode character value.,Character.isDefined('A');,boolean
+isIdentifierIgnorable,Determines if the specified character should be regarded as an ignorable character in a Java identifier.,Character.isIdentifierIgnorable(' ');,boolean
+isJavaIdentifierPart,Determines if the specified character may be part of a Java identifier.,Character.isJavaIdentifierPart('1');,boolean
+isJavaIdentifierStart,Determines if the specified character is permissible as the first character in a Java identifier.,Character.isJavaIdentifierStart('_');,boolean
+isSpaceChar,Determines if the specified character is a Unicode space character.,Character.isSpaceChar(' ');,boolean
+getNumericValue,Returns the numeric value of the specified character.,Character.getNumericValue('5');,int
+charCount,Determines the number of chars needed to represent the specified Unicode code point.,Character.charCount(0x0041);,int
+codePointAt,Returns the code point at the specified index.,Character.codePointAt("Hello", 0);,int
+codePointBefore,Returns the code point preceding the specified index.,Character.codePointBefore("Hello", 1);,int
+codePointCount,Returns the number of Unicode code points in the specified text range.,Character.codePointCount("Hello", 0, 5);,int
+compare,Compares two characters numerically.,Character.compare('a', 'b');,int
+toString,Returns a String object representing the specified character.,Character.toString('A');,String

@@ -1,0 +1,17 @@
+Function Name,Description,Example Usage,Return Type
+append,Appends the specified string to this sequence.,StringBuilder sb = new StringBuilder(); sb.append("Hello");,StringBuilder
+insert,Inserts the specified string at the specified position.,StringBuilder sb = new StringBuilder("Hello"); sb.insert(5, " World");,StringBuilder
+replace,Replaces the characters in a substring of this sequence.,StringBuilder sb = new StringBuilder("Hello World"); sb.replace(6, 11, "Java");,StringBuilder
+delete,Removes the characters in a substring of this sequence.,StringBuilder sb = new StringBuilder("Hello World"); sb.delete(5, 11);,StringBuilder
+deleteCharAt,Removes the character at the specified position.,StringBuilder sb = new StringBuilder("Hello"); sb.deleteCharAt(4);,StringBuilder
+reverse,Reverses the sequence of characters in this sequence.,StringBuilder sb = new StringBuilder("Hello"); sb.reverse();,StringBuilder
+setCharAt,Sets the character at the specified position to the specified value.,StringBuilder sb = new StringBuilder("Hello"); sb.setCharAt(1, 'a');,void
+substring,Returns a new string containing the subsequence of characters.,StringBuilder sb = new StringBuilder("Hello World"); sb.substring(0, 5);,String
+capacity,Returns the current capacity of the sequence.,StringBuilder sb = new StringBuilder(); int capacity = sb.capacity();,int
+charAt,Returns the character at the specified index.,StringBuilder sb = new StringBuilder("Hello"); char c = sb.charAt(1);,char
+indexOf,Returns the index of the first occurrence of the specified string.,StringBuilder sb = new StringBuilder("Hello World"); int index = sb.indexOf("World");,int
+lastIndexOf,Returns the index of the last occurrence of the specified string.,StringBuilder sb = new StringBuilder("Hello World World"); int lastIndex = sb.lastIndexOf("World");,int
+length,Returns the length of the character sequence.,StringBuilder sb = new StringBuilder("Hello"); int len = sb.length();,int
+setLength,Sets the length of the character sequence.,StringBuilder sb = new StringBuilder("Hello"); sb.setLength(3);,void
+ensureCapacity,Ensures that the capacity is at least equal to the specified minimum.,StringBuilder sb = new StringBuilder(); sb.ensureCapacity(50);,void
+trimToSize,Attempts to reduce storage used for the character sequence.,StringBuilder sb = new StringBuilder(); sb.trimToSize();,void

@@ -1,0 +1,20 @@
+Function Name,Description,Example Usage,Return Type
+sort,Sorts the specified array into ascending order.,Arrays.sort(arr);,void
+binarySearch,Searches for a specified element in the array using binary search.,Arrays.binarySearch(arr, key);,int
+copyOf,Copies the specified array, truncating or padding with zeros as necessary.,int[] newArr = Arrays.copyOf(arr, newLength);,int[]
+copyOfRange,Copies the specified range of the array.,int[] newArr = Arrays.copyOfRange(arr, start, end);,int[]
+fill,Assigns the specified value to each element of the specified array.,Arrays.fill(arr, value);,void
+equals,Compares two arrays for equality.,Arrays.equals(arr1, arr2);,boolean
+hashCode,Returns a hash code for the specified array.,int hashCode = Arrays.hashCode(arr);,int
+toString,Returns a string representation of the array.,String str = Arrays.toString(arr);,String
+deepEquals,Compares two arrays deeply for equality.,Arrays.deepEquals(arr1, arr2);,boolean
+deepHashCode,Returns a hash code for a deep representation of the array.,int deepHashCode = Arrays.deepHashCode(arr);,int
+deepToString,Returns a string representation of the deep content of the array.,String str = Arrays.deepToString(arr);,String
+parallelSort,Sorts the array elements in parallel for better performance.,Arrays.parallelSort(arr);,void
+spliterator,Creates a Spliterator for the specified array.,Spliterator<Integer> spliterator = Arrays.spliterator(arr);,Spliterator
+stream,Returns a stream of the array elements.,Stream<Integer> stream = Arrays.stream(arr);,Stream
+asList,Returns a fixed-size list backed by the specified array.,List<Integer> list = Arrays.asList(arr);,List
+mismatch,Finds and returns the index of the first mismatch between two arrays.,int index = Arrays.mismatch(arr1, arr2);,int
+setAll,Sets all elements of the array using a generator function.,Arrays.setAll(arr, i -> i * i);,void
+compare,Compares two arrays lexicographically.,int result = Arrays.compare(arr1, arr2);,int
+compareUnsigned,Compares two arrays lexicographically, treating elements as unsigned.,int result = Arrays.compareUnsigned(arr1, arr2);,int

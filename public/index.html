@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Operations Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Java Operations Viewer</h1>
+  <label for="operationType">Choose an operation type:</label>
+  <select id="operationType" onchange="fetchData()">
+    <option value="">Select</option>
+    <option value="char">Char</option>
+    <option value="string">String</option>
+    <option value="stringbuilder">StringBuilder</option>
+    <option value="array">Array</option>
+  </select>
+
+  <div id="tableContainer">
+    <!-- Table for displaying data will be injected here -->
+  </div>
+
+  <div id="exampleContainer">
+    <!-- Example usage will be injected here -->
+  </div>
+
+  <script>
+async function fetchData() {
+  const type = document.getElementById("operationType").value;
+  if (!type) {
+    document.getElementById("tableContainer").innerHTML = "";
+    return;
+  }
+
+  const response = await fetch(`/data/${type}`);
+  const data = await response.json();
+
+  if (data.length > 0) {
+    let table = `
+      <table>
+        <tr>
+          <th>Function Name</th>
+          <th>Description</th>
+          <th>Return Type</th> <!-- New column for return type -->
+        </tr>
+    `;
+    data.forEach(item => {
+      table += `
+        <tr onclick="showExampleUsage('${item["Function Name"]}')"> <!-- Make rows clickable -->
+          <td>${item["Function Name"]}</td>
+          <td>${item["Description"]}</td>
+          <td>${item["Return Type"]}</td> <!-- Display return type -->
+        </tr>
+      `;
+    });
+    table += `</table>`;
+    document.getElementById("tableContainer").innerHTML = table;
+  } else {
+    document.getElementById("tableContainer").innerHTML = `<p>No data found.</p>`;
+  }
+}
+
+    // Function to show example usage
+    function showExampleUsage(functionName) {
+  // Get the current selected operation type (char, string, stringbuilder, array)
+  const operationType = document.getElementById("operationType").value;
+
+  // Only proceed if a valid operation type is selected
+  if (operationType) {
+    // Adjust the path based on the selected operation type
+    fetch(`/data/${operationType}`)
+      .then(response => response.json())
+      .then(data => {
+        // Find the data for the clicked function name
+        const functionData = data.find(item => item['Function Name'] === functionName);
+        if (functionData) {
+          document.getElementById("exampleContainer").innerHTML = `
+            <h3>Example Usage for ${functionName}:</h3>
+            <p>${functionData['Example Usage']}</p>
+          `;
+        } else {
+          document.getElementById("exampleContainer").innerHTML = '<p>No example usage available.</p>';
+        }
+      })
+      .catch(err => {
+        console.error('Error fetching data:', err);
+        document.getElementById("exampleContainer").innerHTML = '<p>Error loading example usage.</p>';
+      });
+  } else {
+    document.getElementById("exampleContainer").innerHTML = '<p>Please select an operation type first.</p>';
+  }
+}
+
+  </script>
+</body>
+</html>

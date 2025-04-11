@@ -1,0 +1,25 @@
+Function Name,Description,Example Usage,Return Type
+charAt,Returns the character at the specified index.,String str = "Hello"; char c = str.charAt(1);,char
+concat,Concatenates the specified string to the end of this string.,String str = "Hello"; str = str.concat(" World");,String
+contains,Checks if the string contains a specified sequence of characters.,String str = "Hello World"; boolean contains = str.contains("World");,boolean
+contentEquals,Compares this string to a specified CharSequence.,String str = "Hello"; boolean equals = str.contentEquals("Hello");,boolean
+endsWith,Tests if the string ends with the specified suffix.,String str = "Hello World"; boolean endsWith = str.endsWith("World");,boolean
+equals,Compares this string to the specified object.,String str1 = "Hello"; String str2 = "Hello"; boolean equals = str1.equals(str2);,boolean
+equalsIgnoreCase,Compares two strings, ignoring case considerations.,String str1 = "Hello"; String str2 = "hello"; boolean equals = str1.equalsIgnoreCase(str2);,boolean
+getBytes,Encodes this string into a sequence of bytes.,String str = "Hello"; byte[] bytes = str.getBytes();,byte[]
+hashCode,Returns a hash code for the string.,String str = "Hello"; int hash = str.hashCode();,int
+indexOf,Returns the index of the first occurrence of a specified character or substring.,String str = "Hello World"; int index = str.indexOf("World");,int
+isEmpty,Checks if the string is empty.,String str = ""; boolean isEmpty = str.isEmpty();,boolean
+lastIndexOf,Returns the index of the last occurrence of a specified character or substring.,String str = "Hello World World"; int lastIndex = str.lastIndexOf("World");,int
+length,Returns the length of the string.,String str = "Hello"; int len = str.length();,int
+replace,Replaces all occurrences of a specified character or substring with another.,String str = "Hello World"; str = str.replace("World", "Java");,String
+replaceAll,Replaces each substring that matches a regex with a replacement string.,String str = "Hello World"; str = str.replaceAll("o", "O");,String
+replaceFirst,Replaces the first substring that matches a regex with a replacement string.,String str = "Hello World"; str = str.replaceFirst("o", "O");,String
+split,Splits this string around matches of the given regex.,String str = "Hello World"; String[] parts = str.split(" ");,String[]
+startsWith,Tests if the string starts with the specified prefix.,String str = "Hello World"; boolean startsWith = str.startsWith("Hello");,boolean
+substring,Returns a substring starting from the specified beginIndex to endIndex.,String str = "Hello World"; String subStr = str.substring(0, 5);,String
+toCharArray,Converts this string into a new character array.,String str = "Hello"; char[] charArray = str.toCharArray();,char[]
+toLowerCase,Converts all characters of this string to lowercase.,String str = "Hello"; str = str.toLowerCase();,String
+toUpperCase,Converts all characters of this string to uppercase.,String str = "Hello"; str = str.toUpperCase();,String
+trim,Removes leading and trailing whitespace from the string.,String str = "  Hello World  "; str = str.trim();,String
+valueOf,Returns the string representation of the specified value.,int num = 123; String str = String.valueOf(num);,String
